@@ -1,0 +1,6 @@
+# Build output (CMake build tree and the copied binaries).
+build/
+out/
+
+# Visual Studio
+.vs/
