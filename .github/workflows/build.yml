@@ -1,0 +1,39 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v4
+
+      # AvP2 is 32-bit, so always Win32.
+      - name: Configure
+        run: cmake -S . -B build -G "Visual Studio 17 2022" -A Win32
+
+      - name: Build
+        run: cmake --build build --config Release
+
+      - name: Upload binaries
+        uses: actions/upload-artifact@v4
+        with:
+          name: AVP2ModStub
+          path: |
+            build/Release/cshell.dll
+            build/Release/object.lto
+            build/Release/cres.dll
+            build/Release/sres.dll
+            LICENSE
+          if-no-files-found: error
