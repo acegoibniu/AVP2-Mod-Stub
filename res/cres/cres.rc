@@ -1,0 +1,17 @@
+// cres.dll - client resources. No code, just data the engine and cshell.dll read.
+#include <winres.h>
+#include "cres_ids.h"
+
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+
+IDC_POINTER CURSOR "arrow.cur"
+
+STRINGTABLE
+BEGIN
+    IDS_VERSION "0.0.1"
+    IDS_HELLO   "AvP2 Mod stub has been loaded!"
+    IDS_EXIT    "Exit"
+    IDS_CREDIT       "AVP2 Mod Stub by Ace O'Doom"
+    IDS_DISCLAIMER1  "This add-on is not made by or supported by Monolith Productions,"
+    IDS_DISCLAIMER2  "or any of its affiliates and subsidiaries."
+END

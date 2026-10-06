@@ -1,0 +1,11 @@
+// sres.dll - server resources. No code, just a string table.
+#include <winres.h>
+
+#define IDS_VERSION 1
+
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+
+STRINGTABLE
+BEGIN
+    IDS_VERSION "0.0.1"
+END
