@@ -4,3 +4,6 @@ out/
 
 # Visual Studio
 .vs/
+
+# VC++ Resource editor cache files
+*.aps
