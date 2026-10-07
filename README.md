@@ -76,7 +76,7 @@ sres.dll can be loaded by the game.
     (`LT_DEFINE_CLASSES()`, both in `include/lt_server.h`)
 - **Versions.** The engine refuses to load a DLL unless its interface
   version matches what this engine was built for: client shell 2, 
-  server shell 2 and object DLL�1.
+  server shell 2 and object DLL 1.
 - **Interface headers.** LithTech hands the DLLs interface pointers
   (`g_pLTClient`, `g_pLTServer`) whose memory layout is fixed by
   `lithtech.exe`: a vtable (a table of function addresses for C++ virtual
